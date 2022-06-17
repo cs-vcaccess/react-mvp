@@ -12,6 +12,7 @@ server.use(express.json())
 server.use(express.static("whateverIwant"))
 server.listen(3001)
 
-server.get('/todos', (req, res) => {
-  res.status(200).json({"idk": "This is json"})
+server.get('/todos', async (req, res) => {
+  const {rows} = await db.query('SELECT * FROM todos')
+  res.status(200).json(rows)
 })
