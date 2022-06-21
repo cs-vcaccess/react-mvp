@@ -26,3 +26,8 @@
   color: white;
   border-bottom: 1px solid white
 }
+
+.btn {
+  transform: translateY(0.2rem);
+  cursor: pointer;
+}
